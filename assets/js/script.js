@@ -1,6 +1,5 @@
 const header = document.querySelector("header");
 window.addEventListener("scroll", function () {
-  console.log("1");
   header.classList.toggle("sticky", window.scrollY > 60);
 });
 $(document).ready(function () {
@@ -41,7 +40,6 @@ function scrollActive() {
     let sectionId = current.getAttribute("id");
 
     if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-      console.log(sectionId);
       document
         .querySelector(".navbar a[href*=" + sectionId + "]")
         .classList.add("active");
@@ -89,12 +87,9 @@ var typed = new Typed(".type-text", {
 var form = document.getElementById("my-form");
 
 async function handleSubmit(event) {
-  console.log("it was here");
   event.preventDefault();
   var status = document.getElementById("alert");
-  console.log("it was here3");
   var data = new FormData(event.target);
-  console.log("it was here4");
   fetch(event.target.action, {
     method: form.method,
     body: data,
@@ -103,7 +98,6 @@ async function handleSubmit(event) {
     },
   })
     .then((response) => {
-      console.log("it was here5");
       if (response.ok) {
         status.innerHTML = "Thanks for your submission!";
         document.querySelector(".alert_style").style.display = "block";
@@ -114,7 +108,6 @@ async function handleSubmit(event) {
       }
     })
     .catch((error) => {
-      console.log(error);
       status.innerHTML = "Oops! There was a problem submitting your form";
       document.querySelector(".alert_style").style.display = "block";
       setTimeout(function () {
