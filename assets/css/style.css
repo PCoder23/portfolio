@@ -658,20 +658,20 @@ footer{
         flex-direction: column-reverse;
         justify-content: center;
         align-items: center;
+        gap: 10px;
     }
     .share{
         width: 100%;
         justify-content: center;
         flex-direction: row;
-        position:10%;
+        position:15%;
         margin-left: 0;
     }
     .share a{
         margin: 0px 10px;
     }
     .home-img{
-        margin-top: -20%;
-        
+        margin-top: -25%;
         width: 25vh;
         height: 25vh;
     }
