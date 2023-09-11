@@ -448,6 +448,7 @@ justify-content: space-between;
 }
 .project p{
     font-size: var(--p-font);
+    color: var(--text-color);
 }
 .project:hover{
     transform: scaleY(1.1) scaleX(1.1);
